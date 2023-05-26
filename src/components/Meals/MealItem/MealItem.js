@@ -16,7 +16,7 @@ const MealItem = (props) => {
         });
     };
 
-    return <li>
+    return (<li className={styles.meal}>
         <div>
             <h3>{props.name}</h3>
             <div className={styles.description}>{props.description}</div>
@@ -25,7 +25,7 @@ const MealItem = (props) => {
         <div>
             <MealItemForm onAddToCart={addToCartHandler} id={props.id} />
         </div>
-    </li>
-}
+    </li>);
+};
 
 export default MealItem;
